@@ -37,7 +37,7 @@ const UpdateForm = (props) => {
     return (
     
         <div className="container">
-        <form onSubmit={submitHandler}>
+        <form className="col-6 mx-auto" onSubmit={submitHandler}>
             <Link to ='/'>Home</Link><br></br>
                         <label className = "form-label">Author Name:</label>
                         <input 

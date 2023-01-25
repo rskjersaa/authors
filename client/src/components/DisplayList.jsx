@@ -6,6 +6,7 @@ const DisplayList = (props) => {
     
     const [list, setList]= useState([])
 
+
     useEffect(()=>{
         axios.get("http://localhost:8000/api/authors/")
         .then((res)=>{
@@ -43,17 +44,20 @@ const DisplayList = (props) => {
         .catch((err)=>{
             console.log(err)
     })
+    
     }
+
+    
     return (
     <div className="container">
         <div className ="row">
             <div className="col-6 mx-auto">
             <Link to="/new">Add an Author</Link>
                 <p className="purple-text">We have quotes by:</p>
-        <table className= "table">
+        <table className= "table table-bordered">
         <thead>
             <tr >
-                <th className="display-5">Author</th>
+                <th className="display-5" >Author</th>
                 <th className="display-5">Actions Available</th>
             </tr>
         </thead>

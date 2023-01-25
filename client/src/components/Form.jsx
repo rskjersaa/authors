@@ -1,13 +1,13 @@
 import  React from 'react'
 import {Link, useNavigate} from 'react-router-dom'
-import {useState, useEffect, } from 'react'
+import {useState } from 'react'
 import axios from 'axios'
 
 
 
 const Form = () => {
     const [name,setName]=useState ("")
-    const navigate = useNavigate ();
+    // const navigate = useNavigate ();
     const [errors,setErrors]= useState({})
     const submitHandler = (e)=>{
         e.preventDefault()
@@ -18,7 +18,7 @@ const Form = () => {
         })
         .then((res)=>{
             console.log(res)
-            navigate('/')
+    
         })
         .catch((err)=>{
             console.log(err.response.data.error.errors)
